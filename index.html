@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iliaden &amp; Odysseen</title>
+<style>
+  :root {
+    --bg: #faf6ef;
+    --bg-alt: #f1e8d8;
+    --ink: #2b2420;
+    --ink-soft: #5a4f45;
+    --accent: #a8462f;
+    --accent-dark: #7d3220;
+    --gold: #b8862e;
+    --line: #ddd0b8;
+    --card-bg: #ffffff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(160deg, var(--accent-dark), var(--accent));
+    color: #fdf6ea;
+    padding: 4rem 1.5rem 3rem;
+    text-align: center;
+  }
+  header h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    margin: 0 0 0.5rem;
+    letter-spacing: 0.03em;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #f3e2c4;
+    font-style: italic;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    background: var(--bg-alt);
+    padding: 0.9rem 1rem;
+    border-bottom: 1px solid var(--line);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  nav a {
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+  nav a:hover { text-decoration: underline; }
+  main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+  section {
+    padding: 3.5rem 0;
+    border-bottom: 1px solid var(--line);
+  }
+  section:last-of-type { border-bottom: none; }
+  h2 {
+    color: var(--accent-dark);
+    font-size: 1.9rem;
+    margin-top: 0;
+    border-left: 5px solid var(--gold);
+    padding-left: 0.7rem;
+  }
+  h3 {
+    color: var(--ink);
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+  .lede {
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    max-width: 720px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    margin-top: 1.5rem;
+  }
+  .card {
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 1.2rem 1.3rem;
+  }
+  .card h3 { margin-top: 0; color: var(--accent-dark); }
+  .card p { margin: 0; color: var(--ink-soft); font-size: 0.97rem; }
+  .timeline {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0 0;
+    border-left: 3px solid var(--gold);
+  }
+  .timeline li {
+    position: relative;
+    padding: 0 0 1.3rem 1.5rem;
+  }
+  .timeline li::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    background: var(--accent);
+    border-radius: 50%;
+  }
+  .timeline strong { color: var(--accent-dark); }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: var(--card-bg);
+  }
+  th, td {
+    text-align: left;
+    padding: 0.7rem 0.9rem;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.97rem;
+  }
+  th {
+    background: var(--bg-alt);
+    color: var(--accent-dark);
+  }
+  .themes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 1.2rem;
+    padding: 0;
+    list-style: none;
+  }
+  .themes-list li {
+    background: var(--bg-alt);
+    border: 1px solid var(--line);
+    color: var(--accent-dark);
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    font-size: 0.9rem;
+  }
+  footer {
+    text-align: center;
+    padding: 2rem 1rem 3rem;
+    color: var(--ink-soft);
+    font-size: 0.88rem;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Iliaden &amp; Odysseen</h1>
+  <p>De to store episke diktene tilskrevet Homer</p>
+</header>
+
+<nav>
+  <a href="#intro">Innledning</a>
+  <a href="#iliaden">Iliaden</a>
+  <a href="#odysseen">Odysseen</a>
+  <a href="#sammenligning">Sammenligning</a>
+  <a href="#arv">Ettermæle</a>
+</nav>
+
+<main>
+
+  <section id="intro">
+    <h2>Om diktene og Homer</h2>
+    <p class="lede">
+      Iliaden og Odysseen er to episke dikt på gammelgresk, tradisjonelt tilskrevet den blinde dikteren
+      Homer, og regnes som noen av de eldste og mest innflytelsesrike verkene i vestlig litteratur.
+      De ble trolig satt sammen muntlig gjennom generasjoner før de ble nedskrevet rundt 700-tallet f.Kr.,
+      og skildrer hendelser knyttet til den mytiske Trojanerkrigen.
+    </p>
+    <div class="cards">
+      <div class="card">
+        <h3>Form</h3>
+        <p>Begge verk er skrevet i daktylisk heksameter og består av 24 «bøker» (sanger) hver.</p>
+      </div>
+      <div class="card">
+        <h3>Opphav</h3>
+        <p>Muntlig diktertradisjon — sannsynligvis satt sammen av flere fortellere over lang tid.</p>
+      </div>
+      <div class="card">
+        <h3>Kontekst</h3>
+        <p>Handlingen er forankret i den mytiske Trojanerkrigen mellom grekerne (akaierne) og Troja.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="iliaden">
+    <h2>Iliaden</h2>
+    <p class="lede">
+      Iliaden skildrer en kort periode mot slutten av det tiende og siste året av Trojanerkrigen,
+      med «Akilles' vrede» som sitt sentrale tema.
+    </p>
+
+    <h3>Handling</h3>
+    <p>
+      Historien starter med en konflikt mellom kong Agamemnon, lederen for den greske hæren, og
+      krigshelten Akilles, etter at Agamemnon tar fra ham slavekvinnen Briseis. Fornærmet trekker
+      Akilles seg fra kampen, noe som fører til store tap for grekerne. Krigslykken snur først når
+      Akilles' nære venn Patroklos blir drept av den trojanske prinsen Hektor. Rasende av sorg og
+      hevntørst vender Akilles tilbake til slagmarken, dreper Hektor og skjender liket hans — før
+      diktet avsluttes med at kong Priam ydmykt ber om å få sønnens kropp tilbake for en verdig
+      begravelse.
+    </p>
+
+    <h3>Sentrale personer</h3>
+    <div class="cards">
+      <div class="card"><h3>Akilles</h3><p>Gresk krigshelt, nesten usårbar, kjent for sin vrede og sitt stolthet.</p></div>
+      <div class="card"><h3>Hektor</h3><p>Trojas fremste kriger og forsvarer, sønn av kong Priam.</p></div>
+      <div class="card"><h3>Agamemnon</h3><p>Konge av Mykene og øverstkommanderende for de greske styrkene.</p></div>
+      <div class="card"><h3>Priam</h3><p>Trojas aldrende konge og far til Hektor.</p></div>
+      <div class="card"><h3>Helena</h3><p>Kvinnen hvis bortførelse utløste krigen mellom Troja og grekerne.</p></div>
+      <div class="card"><h3>Paris</h3><p>Trojansk prins hvis bortføring av Helena startet konflikten.</p></div>
+    </div>
+
+    <h3>Sentrale temaer</h3>
+    <ul class="themes-list">
+      <li>Vrede og ære</li>
+      <li>Krigens grusomhet</li>
+      <li>Skjebne og gudenes vilje</li>
+      <li>Heltemot og dødelighet</li>
+      <li>Vennskap og sorg</li>
+    </ul>
+  </section>
+
+  <section id="odysseen">
+    <h2>Odysseen</h2>
+    <p class="lede">
+      Odysseen følger kong Odysseus av Ithaka på hans ti år lange, hendelsesrike reise hjem etter
+      at Trojanerkrigen er over.
+    </p>
+
+    <h3>Handling</h3>
+    <p>
+      Mens Odysseus kjemper seg gjennom en rekke farer — blant annet kyklopen Polyfemos, trollkvinnen
+      Kirke, sirenenes sang og havguden Poseidons vrede — venter hans kone Penelope hjemme i Ithaka,
+      hardt presset av frierne som vil ta hans plass og formue. Sønnen Telemachos drar samtidig ut
+      for å søke nyheter om sin savnede far. Historien kulminerer med at Odysseus, forkledd som
+      tigger, vender hjem, avslører seg selv og dreper frierne som har invadert hans hus.
+    </p>
+
+    <h3>Sentrale personer</h3>
+    <div class="cards">
+      <div class="card"><h3>Odysseus</h3><p>Konge av Ithaka, kjent for sin list og oppfinnsomhet.</p></div>
+      <div class="card"><h3>Penelope</h3><p>Odysseus' trofaste kone, som holder frierne på avstand med list.</p></div>
+      <div class="card"><h3>Telemachos</h3><p>Odysseus' sønn, som modnes gjennom sin egen reise.</p></div>
+      <div class="card"><h3>Kirke</h3><p>En trollkvinne som forheksede Odysseus' menn til griser.</p></div>
+      <div class="card"><h3>Polyfemos</h3><p>En kyklop, sønn av Poseidon, som Odysseus blinder for å unnslippe.</p></div>
+      <div class="card"><h3>Poseidon</h3><p>Havguden som forfølger Odysseus av hevn for Polyfemos.</p></div>
+    </div>
+
+    <h3>Sentrale temaer</h3>
+    <ul class="themes-list">
+      <li>Hjemkomst og lengsel</li>
+      <li>List og oppfinnsomhet</li>
+      <li>Gjestfrihet (xenia)</li>
+      <li>Utholdenhet</li>
+      <li>Identitet og gjenkjennelse</li>
+    </ul>
+  </section>
+
+  <section id="sammenligning">
+    <h2>Sammenligning</h2>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th>Iliaden</th>
+          <th>Odysseen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Tidsspenn</td>
+          <td>Noen få uker, mot slutten av krigen</td>
+          <td>Ti år etter krigens slutt</td>
+        </tr>
+        <tr>
+          <td>Hovedperson</td>
+          <td>Akilles</td>
+          <td>Odysseus</td>
+        </tr>
+        <tr>
+          <td>Sjanger-preg</td>
+          <td>Krigsepos</td>
+          <td>Eventyrlig reiseskildring</td>
+        </tr>
+        <tr>
+          <td>Sentral konflikt</td>
+          <td>Ære og vrede på slagmarken</td>
+          <td>Kampen for å komme hjem</td>
+        </tr>
+        <tr>
+          <td>Struktur</td>
+          <td>24 bøker</td>
+          <td>24 bøker</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:2rem;">Kronologi i myten</h3>
+    <ul class="timeline">
+      <li><strong>Før Iliaden:</strong> Paris bortfører Helena — grekerne beleirer Troja i ti år.</li>
+      <li><strong>Iliaden:</strong> Utspiller seg mot slutten av det tiende krigsåret.</li>
+      <li><strong>Trojanske hesten:</strong> Skjer etter Iliadens slutt, forteller ikke direkte om den her.</li>
+      <li><strong>Odysseen:</strong> Odysseus' ti år lange hjemreise etter krigen.</li>
+    </ul>
+  </section>
+
+  <section id="arv">
+    <h2>Ettermæle</h2>
+    <p>
+      Iliaden og Odysseen har hatt enorm innflytelse på vestlig litteratur, kunst og språk i over
+      2500 år. Uttrykk som «akilleshæl», «trojansk hest» og «odyssé» stammer direkte fra disse
+      verkene, og de har inspirert alt fra romersk episk diktning (som Vergils Æneiden) til
+      moderne romaner, filmer og spill.
+    </p>
+  </section>
+
+</main>
+
+<footer>
+  Laget som en enkel oversikt over Homers episke dikt.
+</footer>
+
+</body>
+</html>
