@@ -161,6 +161,23 @@
     color: var(--ink-soft);
     font-size: 0.88rem;
   }
+  figure {
+    margin: 1.5rem 0 0;
+  }
+  figure svg {
+    width: 100%;
+    height: auto;
+    background: var(--card-bg);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+  }
+  figcaption {
+    margin-top: 0.6rem;
+    font-size: 0.88rem;
+    color: var(--ink-soft);
+    font-style: italic;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -172,6 +189,7 @@
 
 <nav>
   <a href="#intro">Innledning</a>
+  <a href="#kart">Kart</a>
   <a href="#iliaden">Iliaden</a>
   <a href="#odysseen">Odysseen</a>
   <a href="#sammenligning">Sammenligning</a>
@@ -202,6 +220,51 @@
         <p>Handlingen er forankret i den mytiske Trojanerkrigen mellom grekerne (akaierne) og Troja.</p>
       </div>
     </div>
+  </section>
+
+  <section id="kart">
+    <h2>Kart over Trojanerkrigen</h2>
+    <p class="lede">
+      Krigen sto mellom grekerne (akaierne), som kom seilende over Egeerhavet fra byer som Mykene
+      og Sparta, og trojanerne, som forsvarte byen Troja på kysten av Lilleasia (dagens Tyrkia).
+    </p>
+    <figure>
+      <svg viewBox="0 0 800 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="kartTittel">
+        <title id="kartTittel">Stilisert kart over Egeerhavet med Hellas og Troja</title>
+        <rect x="0" y="0" width="800" height="420" fill="#cfe0e6"/>
+
+        <path d="M0,0 L230,0 C260,60 200,110 240,160 C270,200 210,240 250,300 C270,350 200,390 230,420 L0,420 Z"
+              fill="#e4d9bd" stroke="#b8862e" stroke-width="2"/>
+        <text x="90" y="150" font-family="Georgia, serif" font-size="22" fill="#7d3220" font-weight="bold">Hellas</text>
+        <circle cx="150" cy="215" r="6" fill="#a8462f"/>
+        <text x="162" y="220" font-family="Georgia, serif" font-size="15" fill="#2b2420">Mykene</text>
+        <circle cx="120" cy="290" r="6" fill="#a8462f"/>
+        <text x="132" y="295" font-family="Georgia, serif" font-size="15" fill="#2b2420">Sparta</text>
+
+        <path d="M800,0 L560,0 C520,70 590,130 555,190 C525,240 600,290 565,350 C545,390 600,410 620,420 L800,420 Z"
+              fill="#e4d9bd" stroke="#b8862e" stroke-width="2"/>
+        <text x="610" y="130" font-family="Georgia, serif" font-size="22" fill="#7d3220" font-weight="bold">Lilleasia</text>
+        <circle cx="558" cy="175" r="7" fill="#a8462f"/>
+        <text x="500" y="160" font-family="Georgia, serif" font-size="16" fill="#2b2420" font-weight="bold">Troja</text>
+
+        <circle cx="330" cy="180" r="3.5" fill="#8a97a3"/>
+        <circle cx="380" cy="230" r="3" fill="#8a97a3"/>
+        <circle cx="420" cy="160" r="4" fill="#8a97a3"/>
+        <circle cx="360" cy="290" r="3" fill="#8a97a3"/>
+        <text x="360" y="60" font-family="Georgia, serif" font-size="17" fill="#4a6572" font-style="italic">Egeerhavet</text>
+
+        <path d="M155,210 C280,140 420,150 550,178" fill="none" stroke="#7d3220"
+              stroke-width="2.5" stroke-dasharray="8 6" marker-end="url(#pil)"/>
+        <text x="270" y="120" font-family="Georgia, serif" font-size="14" fill="#7d3220" font-style="italic">Den greske flåten</text>
+
+        <defs>
+          <marker id="pil" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="#7d3220"/>
+          </marker>
+        </defs>
+      </svg>
+      <figcaption>Stilisert, ikke geografisk nøyaktig kart: Hellas i vest, Troja på kysten av Lilleasia i øst, atskilt av Egeerhavet.</figcaption>
+    </figure>
   </section>
 
   <section id="iliaden">
